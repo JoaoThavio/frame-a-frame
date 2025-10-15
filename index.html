@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CineExplorer - Descubra Filmes Incríveis</title>
+    <link rel="stylesheet" href="estilo.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="configuracoes-overlay" id="configOverlay">
+        <div class="configuracoes-modal">
+            <div class="configuracoes-cabecalho">
+                <h2>Configurações da API</h2>
+                <button class="fechar-config" id="fecharConfig">×</button>
+            </div>
+            <div class="configuracoes-corpo">
+                <div class="configuracoes-grupo">
+                    <label for="chaveApiInput">Sua Chave da API TMDB</label>
+                    <input type="text" id="chaveApiInput" placeholder="Cole sua chave aqui">
+                    <p class="configuracoes-ajuda">
+                        Não tem uma chave? 
+                        <a href="https://www.themoviedb.org/settings/api" target="_blank">Obtenha uma gratuitamente</a>
+                    </p>
+                </div>
+                <div class="configuracoes-acoes">
+                    <button class="botao-secundario" id="usarChavePadrao">Usar Chave Padrão</button>
+                    <button class="botao-principal" id="salvarChave">Salvar Chave</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <header class="cabecalho">
+        <div class="container">
+            <div class="cabecalho-conteudo">
+                <div class="logo">
+                    <span class="logo-icone">🎬</span>
+                    <h1>Frame a Frame</h1>
+                </div>
+                
+                <div class="cabecalho-controles">
+                    <div class="busca-container">
+                        <input type="text" class="campo-busca" id="campoBusca" placeholder="Buscar filmes...">
+                        <button class="botao-busca" id="botaoBusca">
+                            <span class="fas fa-search"></span>
+                        </button>
+                    </div>
+                    <button class="botao-config" id="botaoConfig">
+                        <i class="fas fa-gear"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="principal">
+        <div class="container">
+            <section class="secao-filmes" id="secaoFilmesPopulares">
+                <h2 class="titulo-secao">Filmes em Destaque</h2>
+                <div class="grid-filmes" id="containerFilmes">
+                    <div class="carregando">Carregando filmes...</div>
+                </div>
+            </section>
+
+            <section class="secao-detalhes" id="secaoDetalhes">
+                <!-- Detalhes do filme serão carregados aqui -->
+            </section>
+        </div>
+    </main>
+
+    <footer class="rodape">
+        <div class="container">
+            <div class="rodape-conteudo">
+                <p class="info-api">
+                    Este site utiliza a API do The Movie Database (TMDB). 
+                    <a href="https://www.themoviedb.org/documentation/api" target="_blank">Documentação da API</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
